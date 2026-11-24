@@ -21,14 +21,21 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 public class AuthResponse {
-	
+
 	private String userId;
-	private String emailId;
+	private String email;
 	private String firstName;
 	private String lastName;
 	private BigDecimal walletBalance;
-	
+
 	private String accessToken;
 	private String refreshToken;
 	private String tokenType = "Bearer";
+
+	public AuthResponse(String userId, String email, String accessToken, String refreshToken) {
+		this.userId = userId;
+		this.email = email;
+		this.accessToken = accessToken;
+		this.refreshToken = refreshToken;
+	}
 }
