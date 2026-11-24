@@ -6,4 +6,6 @@ import com.trade.user_service.entity.User;
 
 public interface UserRepository extends JpaRepository<User, String>{
 
+	boolean existByEmail(String emailId);
+
 }
